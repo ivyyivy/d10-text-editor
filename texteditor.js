@@ -1,6 +1,7 @@
 var input = document.getElementById("input")
 
 function makeBold() {
+    // input.style.fontWeight = "bold";
     input.classList.toggle("makeBold")
 }
 
