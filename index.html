@@ -17,21 +17,24 @@
             <h1 class="text-4xl font-bold text-purple-900">TEXT EDITOR</h1>
         </div>
         <div id="nav" class="flex justify-around items-center text-purple-900 h-12">
-            <button class="mx-4 p-2 border-solid border-2 border-purple-200">Bold</button>
-            <button class="mx-4 p-2 border-solid border-2 border-purple-200">Italic</button>
-            <button class="mx-4 p-2 border-solid border-2 border-purple-200 fas fa-align-left"></button>
-            <button class="mx-4 p-2 border-solid border-2 border-purple-200 fas fa-align-center"></button>
-            <button class="mx-4 p-2 border-solid border-2 border-purple-200 fas fa-align-right"></button>
-            <button class="mx-4 p-2 border-solid border-2 border-purple-200">Upper
+            <button class="mx-4 p-2 border-solid border-2 border-purple-200" onclick="makeBold()">Bold</button>
+            <button class="mx-4 p-2 border-solid border-2 border-purple-200" onclick="makeItalic()">Italic</button>
+            <button class="mx-4 p-2 border-solid border-2 border-purple-200 fas fa-align-left"
+                onclick="alignLeft()"></button>
+            <button class="mx-4 p-2 border-solid border-2 border-purple-200 fas fa-align-center"
+                onclick="alignCenter()"></button>
+            <button class="mx-4 p-2 border-solid border-2 border-purple-200 fas fa-align-right"
+                onclick="alignRight()"></button>
+            <button class="mx-4 p-2 border-solid border-2 border-purple-200" onclick="upperCase()">Upper
                 Case</button>
-            <button class="mx-4 p-2 border-solid border-2 border-purple-200">Lower
+            <button class="mx-4 p-2 border-solid border-2 border-purple-200" onclick="lowerCase()">Lower
                 Case</button>
-            <button class="mx-4 p-2 border-solid border-2 border-purple-200">Capitalize</button>
-            <button class="mx-4 p-2 border-solid border-2 border-purple-200">Clear
+            <button class="mx-4 p-2 border-solid border-2 border-purple-200" onclick="capitalize()">Capitalize</button>
+            <button class="mx-4 p-2 border-solid border-2 border-purple-200" onclick="clearText()">Clear
                 Text</button>
         </div>
         <div id="textarea"
-            class="flex justify-center items-center h-full mx-20 my-8 rounded-lg border-4 border-purple-900 shadow-lg">
+            class="flex justify-center items-center h-full mx-20 my-8 rounded-lg border-4 border-purple-900">
             <textarea id="input" placeholder="Type your text here..." class="flex-grow h-full"></textarea>
         </div>
     </div>
