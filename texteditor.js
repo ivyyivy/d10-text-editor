@@ -1,11 +1,17 @@
-// var input = document.getElementById("input");
+var input = document.getElementById("input")
+
+
 
 
 var buttonClickCounts = {
     bold: 0,
     italic: 0,
+    alignLeft: 0,
+    alignCenter: 0,
+    alignRight: 0,
     uppercase: 0,
-    lowercase: 0
+    lowercase: 0,
+    capitalize: 0
 };
 
 function makeBold() {
@@ -57,9 +63,14 @@ function lowerCase() {
 }
 
 function capitalize() {
-    input.value = input.value.toLowerCase().split(' ').map(function (word) {
-        return word.charAt(0).toUpperCase() + word.slice(1);
-    }).join(' ');
+    if (buttonClickCounts.capitalize % 2 === 0) {
+        input.value = input.value.toLowerCase().split(' ').map(function (word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }).join(' ');
+    } else {
+        input.style.textTransform = "none"
+    }
+    buttonClickCounts.capitalize++;
 }
 
 function clearText() {
